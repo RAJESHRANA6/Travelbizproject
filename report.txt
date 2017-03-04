@@ -1,0 +1,53 @@
+using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Data.SqlClient;
+
+public partial class Report : System.Web.UI.Page
+{
+    SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["conn"]);
+    SqlCommand cmd = new SqlCommand();
+    SqlDataAdapter da;
+    DataSet ds;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        Label3.Text = Session["User"].ToString();
+        if (!Page.IsPostBack)
+        {
+            DropDownList1.Items.Clear();
+            con.Open();
+        //    cmd = new SqlCommand("select month from renewal", con);
+            cmd = new SqlCommand("select month from renewal where uname='" + Label3.Text + "'", con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                DropDownList1.Items.Add(dr[0].ToString());
+            }
+            con.Close();
+        }
+    }
+    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (DropDownList1.Text != "Select")
+        {
+            con.Open();
+            cmd = new SqlCommand("select month,userid,uname,source,desti from renewal where month='" + DropDownList1.Text + "' and  uname='" + Label3.Text + "'", con);
+            da = new SqlDataAdapter(cmd);
+            ds = new DataSet();
+            da.Fill(ds);
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
+            con.Close();
+        }            
+    }
+}
+

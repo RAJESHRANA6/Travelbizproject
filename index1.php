@@ -24,5 +24,6 @@ $content= '<img src="images/travelbiz.png" class="imgleft" />
 </p>';
 
 include 'template.php';
+include 'sign-up.php';
 
 ?>

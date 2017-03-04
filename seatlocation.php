@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include('db.php');//Here we link seat allocation with our database
 $id=$_GET['id'];
 $result = mysql_query("SELECT * FROM route WHERE id='$id'");
 while($row = mysql_fetch_array($result))

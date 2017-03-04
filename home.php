@@ -2,7 +2,7 @@
     
     <head>
         
-        <title>login</title>
+        <title>login</title> //this is an static page whose link is redirect to home is just created to give an idea of routes
     <body>
         <table border="2" cellpadding="10"> 
             <tr>

@@ -1,7 +1,7 @@
 <?php
 $title= "Home";
-$content= '<img src="images/travelbiz.png" class="imgleft" /> 
-<h3> Bus Reservation system </h3>
+$content= '<img src="images/travelbiz.png" class="imgleft" /> //take image form travelbiz.png and align it to left
+<h3> Bus Reservation system </h3>//formal introduction of website
 <p>
     Bus Reservation System is designed to automate the online ticket purchasing 
     through an easy-to-use online bus booking system. Embed our online bus ticketing system 

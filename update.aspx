@@ -10,9 +10,9 @@ namespace PresentationLayer
 {
     public partial class Updatedpoints : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e) /*pageload method pass two argument*/
         {
-            if(IsPostBack == false)
+            if(IsPostBack == false)           /*check the condition*/
             {
                 TextBox1.Text = Session["did"].ToString();
                 TextBox2.Text = Session["dname"].ToString();

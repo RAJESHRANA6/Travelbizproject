@@ -1,5 +1,5 @@
 <!DOCTYPE HTML> 
-<html> <head> 
+<html> <head>  //sign-up module where table is created and post method is called for registration
         <title>Sign-Up</title> 
         <link rel="stylesheet" type="text/css" href="styles/formstyle.css" />
     </head> <body id="body-color">

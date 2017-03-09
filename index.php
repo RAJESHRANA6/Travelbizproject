@@ -1,5 +1,5 @@
 <?php
-$title= "Home";
+$title= "Home";  //home page of php file where we add introduction about our website
 $content= '<img src="images/travelbiz.png" class="imgleft" /> //take image form travelbiz.png and align it to left
 <h3> Bus Reservation system </h3>//formal introduction of website
 <p>

@@ -1,10 +1,10 @@
 <?php
 include('db.php');//Here we link seat allocation with our database
-$id=$_GET['id'];
+$id=$_GET['id']; // search query by id
 $result = mysql_query("SELECT * FROM route WHERE id='$id'");
 while($row = mysql_fetch_array($result))
 	{
-	$seatnum=$row['numseats'];
+	$seatnum=$row['numseats']; //if condition is matched we will get seatnum
 	}
 ?>
 Bus Layout <br>

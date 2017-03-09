@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
-    <head>
+<html>//specify the type of document
+    <head>//header of html file
         <meta charset="UTF-8">
-        <title><?php echo $title; ?> </title>
+        <title><?php echo $title; ?> </title>//title
         <link rel="stylesheet" type="text/css" href="styles/stylesheet.css" />
         
     </head>
@@ -14,10 +14,10 @@
             
             <nav id="navigation">
                 <ul id="nav">
-                    <li><a href="home.php">Home</a></li>     
-                <li><a href="#">About</a></li>
-                <li><a href="#">Bus info</a></li>
-                <li><a href="sign-up.php">Registration</a></li>
+                    <li><a href="home.php">Home</a></li>     //list of module shown at home page
+                <li><a href="#">About</a></li>               //about bus pass system
+                <li><a href="#">Bus info</a></li>            //bus information
+                <li><a href="sign-up.php">Registration</a></li> //sign-up module
                
         
                 <li><a href="#">Login</a></li>

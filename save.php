@@ -13,8 +13,8 @@ function createRandomPassword() { //create new password
 	}
 	return $pass;
 }
-$confirmation = createRandomPassword();
-$fname=$_POST['fname'];
+$confirmation = createRandomPassword(); // create random password
+$fname=$_POST['fname']; 
 $qty=$_POST['qty'];
 $lname=$_POST['lname'];
 $busnum=$_POST['busnum'];

@@ -11,10 +11,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Data.SqlClient;
-
-public partial class Report : System.Web.UI.Page
+ 
+public partial class Report : System.Web.UI.Page  //public class implement user interface
 {
-    SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["conn"]);
+    SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["conn"]);   // sql connection with database
     SqlCommand cmd = new SqlCommand();
     SqlDataAdapter da;
     DataSet ds;
